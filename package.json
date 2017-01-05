@@ -1,0 +1,28 @@
+{
+  "name": "kim-deal-with-it",
+  "version": "1.0.0",
+  "description": "A nice twitter bot to tweet in honor of Kim Deal",
+  "main": "index.js",
+  "dependencies": {
+    "node-twitterbot": "^0.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seafoam6/kim-deal-with-it.git"
+  },
+  "keywords": [
+    "kim",
+    "deal",
+    "twitter"
+  ],
+  "author": "Steve Barman",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/seafoam6/kim-deal-with-it/issues"
+  },
+  "homepage": "https://github.com/seafoam6/kim-deal-with-it#readme"
+}
