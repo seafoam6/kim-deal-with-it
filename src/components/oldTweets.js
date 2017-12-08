@@ -1,5 +1,6 @@
 import React from 'react';
 import { FireInstance } from '../services/FireInstance';
+import moment from 'moment';
 
 const oldTweets = class extends React.Component {
   constructor(props) {
@@ -14,11 +15,11 @@ const oldTweets = class extends React.Component {
       let newState = [];
       for (let tweet in tweets) {
         newState.push({
+          key: tweet,
           timesTweeted: tweets[tweet].timesTweeted,
           timestamp: tweets[tweet].timestamp,
           value: tweets[tweet].value
         });
-        console.log(tweets[tweet].value);
       }
       this.setState({
         tweets: newState
@@ -43,9 +44,13 @@ const oldTweets = class extends React.Component {
             <tbody className="lh-copy">
               {this.state.tweets.map(tweet => {
                 return (
-                  <tr className="stripe-dark">
+                  <tr className="stripe-dark" key={tweet.key}>
                     <td className="pa3">put button here</td>
-                    <td className="pa3">{tweet.timestame}</td>
+                    <td className="pa3">
+                      {moment(tweet.timestamp).format(
+                        'MMMM Do YYYY, h:mm:ss a'
+                      )}
+                    </td>
                     <td className="pa3">{tweet.timesTweeted}</td>
                     <td className="pa3">{tweet.value}</td>
                   </tr>
