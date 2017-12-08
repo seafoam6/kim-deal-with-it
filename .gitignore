@@ -23,4 +23,4 @@ yarn-error.log*
 
 # styles
 *.css
-*/*.css
+**/*.css
