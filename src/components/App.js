@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import oldTweets from './oldTweets';
 import newTweet from './newTweet';
-import '../styles/App.css';
 
 const App = () => (
   <div>
