@@ -14,22 +14,24 @@ class newTweet extends React.Component {
   }
 
   handleSubmit(event) {
-    //alert('A name was submitted: ' + this.state.value);
+    alert('Tweet submitted: ' + this.state.value);
     event.preventDefault();
   }
+
+  componentDidMount() {}
 
   render() {
     return (
       <form className="measure center" onSubmit={this.handleSubmit}>
-        <fieldset id="newTweet" class="ba b--transparent ph0 mh0">
-          <legend class="f4 fw6 ph0 mh0">New Tweet</legend>
-          <div class="mt3">
-            <label class="db fw6 lh-copy f6" for="tweet">
+        <fieldset id="newTweet" className="ba b--transparent ph0 mh0">
+          <legend className="f4 fw6 ph0 mh0">New Tweet</legend>
+          <div className="mt3">
+            <label className="db fw6 lh-copy f6" htmlFor="tweet">
               Tweet
             </label>
             <span>[ {this.state.value.length} / 280]</span>
             <textarea
-              class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+              className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
               type="email"
               name="email-address"
               id="tweet"
