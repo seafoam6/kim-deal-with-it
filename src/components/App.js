@@ -2,6 +2,9 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import oldTweets from './oldTweets';
 import newTweet from './newTweet';
+//import 'firebaseui/dist/firebaseui.css';
+//import FirebaseUI from '../services/FirebaseUI';
+//      <FirebaseUI />
 
 const App = () => (
   <div>

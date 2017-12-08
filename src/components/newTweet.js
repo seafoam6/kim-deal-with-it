@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import firebase from 'firebase';
 
 class newTweet extends React.Component {
   constructor(props) {
@@ -13,12 +14,24 @@ class newTweet extends React.Component {
     this.setState({ value: event.target.value });
   }
 
-  handleSubmit(event) {
-    alert('Tweet submitted: ' + this.state.value);
-    event.preventDefault();
+  handleSubmit(e) {
+    console.log('Tweet submitted: ' + this.state.value);
+    e.preventDefault();
+    this.firebaseRef.push({
+      value: this.state.value,
+      timestamp: Date.now(),
+      timesTweeted: 0
+    });
+    this.setState({ value: '' });
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    //console.log(fire.auth().currentUser);
+  }
+
+  componentWillMount() {
+    this.firebaseRef = firebase.database().ref('tweets');
+  }
 
   render() {
     return (
@@ -27,9 +40,9 @@ class newTweet extends React.Component {
           <legend className="f4 fw6 ph0 mh0">New Tweet</legend>
           <div className="mt3">
             <label className="db fw6 lh-copy f6" htmlFor="tweet">
-              Tweet
+              [ {this.state.value.length} / 280]
             </label>
-            <span>[ {this.state.value.length} / 280]</span>
+
             <textarea
               className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
               type="email"

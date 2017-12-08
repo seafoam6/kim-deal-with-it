@@ -6,6 +6,8 @@
   "dependencies": {
     "concurrently": "^3.5.1",
     "firebase": "^4.8.0",
+    "firebaseui": "^2.5.1",
+    "moment": "^2.19.3",
     "node-sass-chokidar": "^0.0.3",
     "node-twitterbot": "^0.2.2",
     "react": "^16.2.0",
@@ -17,8 +19,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start":
-      "concurrently \"react-scripts start\" \"node-sass-chokidar --watch src/styles -o src/styles\"",
+    "start": "concurrently \"react-scripts start\" \"node-sass-chokidar --watch src/styles -o src/styles\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
@@ -27,7 +28,11 @@
     "type": "git",
     "url": "git+https://github.com/seafoam6/kim-deal-with-it.git"
   },
-  "keywords": ["kim", "deal", "twitter"],
+  "keywords": [
+    "kim",
+    "deal",
+    "twitter"
+  ],
   "author": "Steve Barman",
   "license": "UNLICENSED",
   "bugs": {
